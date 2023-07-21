@@ -13,6 +13,9 @@
         <PackageId>Cord.SDK</PackageId>
         <PackageIcon>cord.png</PackageIcon>
         <RepositoryUrl>https://github.com/simpliciterio/cord.net.sdk</RepositoryUrl>
+        <Authors>DealForward</Authors>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -24,16 +27,24 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="cord.png" CopyToOutputDirectory="Always" CopyToPublishDirectory="Always">
-        <Pack>True</Pack>
-        <PackagePath></PackagePath>
-      </None>
+        <None Update="cord.png" CopyToOutputDirectory="Always" CopyToPublishDirectory="Always">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+        <None Include="../../LICENSE">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+        <None Include="../../README.md">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Application\Organizations\V1\" />
-      <Folder Include="Application\Threads\V1\" />
-      <Folder Include="Application\Users\V1\" />
+        <Folder Include="Application\Organizations\V1\" />
+        <Folder Include="Application\Threads\V1\" />
+        <Folder Include="Application\Users\V1\" />
     </ItemGroup>
 
 
