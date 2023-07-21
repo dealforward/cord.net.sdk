@@ -11,6 +11,7 @@
         <Description>Toolkit for the communication of Cord.</Description>
         <PackageId>Cord.SDK</PackageId>
         <PackageIcon>cord.png</PackageIcon>
+        <RepositoryUrl>https://github.com/simpliciterio/cord.net.sdk</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
