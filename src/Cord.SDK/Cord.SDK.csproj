@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IsPackable>true</IsPackable>
         <Version>1.0.0-RC.1</Version>
         <Title>CORD SDK</Title>
         <Description>Toolkit for the communication of Cord.</Description>
