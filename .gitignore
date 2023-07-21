@@ -1,0 +1,11 @@
+# IDE
+.idea/
+.vscode/
+# Operating System
+.DS_Store
+
+# .NET
+bin
+obj
+Debug
+Release

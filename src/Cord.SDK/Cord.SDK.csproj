@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>1.0.0-RC.1</Version>
+        <Title>CORD SDK</Title>
+        <Description>Toolkit for the communication of Cord.</Description>
+        <PackageId>Cord.SDK</PackageId>
+        <PackageIcon>cord.png</PackageIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JsonWebToken" Version="2.0.0-beta.4" />
+        <PackageReference Include="MediatR" Version="12.0.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="RestSharp" Version="110.2.1-alpha.0.2" />
+        <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="110.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="cord.png" CopyToOutputDirectory="Always" CopyToPublishDirectory="Always">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Application\Organizations\V1\" />
+      <Folder Include="Application\Threads\V1\" />
+      <Folder Include="Application\Users\V1\" />
+    </ItemGroup>
+
+
+</Project>
