@@ -2,8 +2,24 @@ namespace Cord.SDK;
 
 public interface ICord
 {
+    /// <summary>
+    /// A token-generating service that users or the system will use to access the Cord.
+    /// </summary>
+    /// <value></value>
     ITokenGenerator TokenGenerator { get; }
+    /// <summary>
+    /// Rest service for the Threads.
+    /// </summary>
+    /// <value></value>
     IThreadsContainer Threads { get; }
+    /// <summary>
+    /// Rest service for the Users.
+    /// </summary>
+    /// <value></value>
     IUsersContainer Users { get; }
+    /// <summary>
+    /// Rest service for the Organizations.
+    /// </summary>
+    /// <value></value>
     IOrganizationsContainer Organizations { get; }
 }

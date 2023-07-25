@@ -16,7 +16,7 @@ public class CordException : Exception
     public static void ThrowExceptionFromHttpResponse(HttpStatusCode code, string? errCode, string? contentMessage)
     {
         if (code is HttpStatusCode.InternalServerError)
-            throw new CordException(contentMessage, "500", "internal server error");
+            throw new CordException("UNKOWN ERROR", "500", "internal server error");
         if (code is not (HttpStatusCode.BadRequest or HttpStatusCode.Unauthorized) || errCode is null ||
             contentMessage is null) return;
         switch (errCode)
