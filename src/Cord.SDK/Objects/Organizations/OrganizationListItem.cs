@@ -1,7 +1,9 @@
 using Newtonsoft.Json;
 
 namespace Cord.SDK.Objects;
-
+/// <summary>
+/// Represents the result of an HTTP request for the organization list.
+/// </summary>
 public sealed class OrganizationListItem
 {
     [JsonProperty("id")] public string Id { get; set; } = null!;

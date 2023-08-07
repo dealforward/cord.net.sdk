@@ -2,7 +2,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace Cord.SDK.Objects;
-
+/// <summary>
+/// Used to update organization data.
+/// </summary>
 public sealed class OrganizationPutItem
 {
     [JsonConstructor]
@@ -14,7 +16,11 @@ public sealed class OrganizationPutItem
     public OrganizationStatus Status { get; set; } = OrganizationStatus.active;
 
     [JsonProperty("members")] public List<string> Members { get; set; } = new();
-
+    /// <summary>
+    /// Add a new member.
+    /// </summary>
+    /// <param name="memberId"></param>
+    /// <returns></returns>
     public OrganizationPutItem AddMember(string memberId)
     {
         Members?.Add(memberId);
