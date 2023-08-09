@@ -3,7 +3,7 @@ using Newtonsoft.Json.Converters;
 
 namespace Cord.SDK.Objects;
 
-public sealed class MessageListItem
+public class MessageListItem
 {
     /// <summary>
     /// The ID for the message.
