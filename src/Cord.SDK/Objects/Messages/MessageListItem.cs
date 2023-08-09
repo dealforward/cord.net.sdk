@@ -72,5 +72,8 @@ public sealed class MessageListItem
     /// The items attached to this message.
     /// </summary>
     [JsonProperty("attachments")] public IEnumerable<IAttachment>? Attachments { get; set; }
+    /// <summary>
+    /// The reactions to this message.
+    /// </summary>
     [JsonProperty("reactions")] public IEnumerable<MessageReaction>? Reactions { get; set; }
 }
