@@ -51,6 +51,8 @@ public static class DependencyInjection
             .AddScoped<IUsersV1, UsersV1>()
             .AddScoped<IUsersContainer, UsersContainer>()
             .AddScoped<IOrganizationsV1, OrganizationsV1>()
-            .AddScoped<IOrganizationsContainer, OrganizationsContainer>();
+            .AddScoped<IOrganizationsContainer, OrganizationsContainer>()
+            .AddScoped<IMessagesV1, MessagesV1>()
+            .AddScoped<IMessagesContainer, MessagesContainer>();
     }
 }

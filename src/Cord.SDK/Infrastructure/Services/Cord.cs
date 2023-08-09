@@ -7,17 +7,20 @@ internal sealed class Cord : ICord
         IThreadsContainer threadsContainer,
         ITokenGenerator tokenGenerator,
         IUsersContainer usersContainer,
-        IOrganizationsContainer organizations
+        IOrganizationsContainer organizations,
+        IMessagesContainer messages
     )
     {
         TokenGenerator = tokenGenerator;
         Threads = threadsContainer;
         Users = usersContainer;
         Organizations = organizations;
+        Messages = messages;
     }
 
     public ITokenGenerator TokenGenerator { get; }
     public IThreadsContainer Threads { get; }
     public IUsersContainer Users { get; }
     public IOrganizationsContainer Organizations { get; }
+    public IMessagesContainer Messages { get; }
 }
