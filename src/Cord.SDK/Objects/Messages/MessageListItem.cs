@@ -24,7 +24,7 @@ public class MessageListItem
     /// <summary>
     /// The content of the message.
     /// </summary>
-    [JsonProperty("content")] public object Content { get; set; } = null!;
+    [JsonProperty("content")] public IEnumerable<MessageContent> Content { get; set; } = null!;
     /// <summary>
     /// A plaintext version of the structured message content.
     /// </summary>
