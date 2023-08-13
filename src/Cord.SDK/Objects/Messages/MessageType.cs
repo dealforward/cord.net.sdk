@@ -1,7 +1,9 @@
+using System.Runtime.Serialization;
+
 namespace Cord.SDK.Objects;
 
 public enum MessageType
 {
-    action_message,
-    user_message
+    [EnumMember(Value = "action_message")] ActionMessage,
+    [EnumMember(Value = "user_message")] UserMessage
 }
