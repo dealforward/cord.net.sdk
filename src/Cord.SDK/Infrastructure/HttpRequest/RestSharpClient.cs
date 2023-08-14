@@ -67,6 +67,14 @@ internal sealed class RestSharpClient : IRestClient
         return response.Data;
     }
 
+    public async Task<TResponse?> Delete<TResponse>(string uri, CancellationToken cancellationToken)
+    {
+        var request = GenerateRequest(uri, Method.Delete);
+        var response = await _restClient.ExecuteAsync<TResponse>(request, cancellationToken);
+        ValidateResponse(response);
+        return response.Data;
+    }
+
     private void ValidateResponse<T>(RestResponse<T> response)
     {
         if (!_errorStatuses.Contains(response.StatusCode)) return;
