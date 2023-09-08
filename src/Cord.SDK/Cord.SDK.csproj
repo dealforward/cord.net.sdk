@@ -1,8 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -11,27 +10,28 @@
         <Description>Toolkit for the communication of Cord.</Description>
         <PackageId>Cord.SDK</PackageId>
         <PackageIcon>cord.png</PackageIcon>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <RepositoryUrl>https://github.com/simpliciterio/cord.net.sdk</RepositoryUrl>
         <Authors>DealForward</Authors>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="JsonWebToken" Version="2.0.0-beta.4" />
         <PackageReference Include="MediatR" Version="12.0.1" />
-        <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="RestSharp" Version="110.2.1-alpha.0.2" />
         <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="110.2.0" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Update="cord.png" CopyToOutputDirectory="Always" CopyToPublishDirectory="Always">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
+        <Content Include="cord.png" Pack="true" PackagePath="">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
         <None Include="../../LICENSE">
             <Pack>True</Pack>
             <PackagePath></PackagePath>
