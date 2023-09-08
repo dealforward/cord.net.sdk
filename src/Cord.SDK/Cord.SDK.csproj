@@ -21,6 +21,8 @@
     <ItemGroup>
         <PackageReference Include="JsonWebToken" Version="2.0.0-beta.4" />
         <PackageReference Include="MediatR" Version="12.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="RestSharp" Version="110.2.1-alpha.0.2" />
         <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="110.2.0" />

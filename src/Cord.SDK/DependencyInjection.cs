@@ -24,11 +24,7 @@ public static class DependencyInjection
     private static IServiceCollection ConfigureOptions(this IServiceCollection serviceCollection,
         Action<CordSdkOptions> configure)
     {
-        var options = new CordSdkOptions();
-        configure.Invoke(options);
-        ArgumentNullException.ThrowIfNull(options.ApplicationId, nameof(options.ApplicationId));
-        ArgumentNullException.ThrowIfNull(options.Secret, nameof(options.Secret));
-        serviceCollection.AddSingleton(options);
+        serviceCollection.Configure<CordSdkOptions>(configure);
         return serviceCollection;
     }
 
