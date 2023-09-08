@@ -10,7 +10,6 @@
         <Description>Toolkit for the communication of Cord.</Description>
         <PackageId>Cord.SDK</PackageId>
         <PackageIcon>cord.png</PackageIcon>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <RepositoryUrl>https://github.com/simpliciterio/cord.net.sdk</RepositoryUrl>
         <Authors>DealForward</Authors>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
