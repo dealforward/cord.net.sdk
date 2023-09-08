@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Get Version from TagName
-        run: echo "VERSION=${GITHUB_REF#refs/tags/" >> $GITHUB_ENV
+        run: echo "VERSION=${GITHUB_REF#refs/tags/*" >> $GITHUB_ENV
       
       - name: Print Version
         run: echo ${VERSION}
