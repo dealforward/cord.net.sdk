@@ -36,7 +36,10 @@ jobs:
 
       - name: Pack
         run: dotnet pack ${{env.ProjectPath}}/${{env.ProjectName}}.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
-        
+      
+      - name: Add Nuget Source
+        run: dotnet nuget add source --username dealforward --password ${{ secrets.NUGET_TO_GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/dealforward/index.json"
+
       - name: Push
         run: dotnet nuget push "*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${NUGET_API_KEY}
         env:
