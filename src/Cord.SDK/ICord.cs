@@ -22,4 +22,9 @@ public interface ICord
     /// </summary>
     /// <value></value>
     IOrganizationsContainer Organizations { get; }
+    /// <summary>
+    /// All available operations for listing and editing messages.
+    /// </summary>
+    /// <value></value>
+    IMessagesContainer Messages { get; }
 }

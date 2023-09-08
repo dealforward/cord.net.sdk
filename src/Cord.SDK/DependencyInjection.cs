@@ -24,11 +24,7 @@ public static class DependencyInjection
     private static IServiceCollection ConfigureOptions(this IServiceCollection serviceCollection,
         Action<CordSdkOptions> configure)
     {
-        var options = new CordSdkOptions();
-        configure.Invoke(options);
-        ArgumentNullException.ThrowIfNull(options.ApplicationId, nameof(options.ApplicationId));
-        ArgumentNullException.ThrowIfNull(options.Secret, nameof(options.Secret));
-        serviceCollection.AddSingleton(options);
+        serviceCollection.Configure<CordSdkOptions>(configure);
         return serviceCollection;
     }
 
@@ -51,6 +47,8 @@ public static class DependencyInjection
             .AddScoped<IUsersV1, UsersV1>()
             .AddScoped<IUsersContainer, UsersContainer>()
             .AddScoped<IOrganizationsV1, OrganizationsV1>()
-            .AddScoped<IOrganizationsContainer, OrganizationsContainer>();
+            .AddScoped<IOrganizationsContainer, OrganizationsContainer>()
+            .AddScoped<IMessagesV1, MessagesV1>()
+            .AddScoped<IMessagesContainer, MessagesContainer>();
     }
 }

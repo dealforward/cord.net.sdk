@@ -1,5 +1,6 @@
 using Cord.SDK.Application.Abstractions.Messaging;
 using JsonWebToken;
+using Microsoft.Extensions.Options;
 
 namespace Cord.SDK.Application.Auth.Commands.GenerateServerToken;
 
@@ -7,9 +8,9 @@ internal sealed class GenerateServerTokenCommandHandler : ICommandHandler<Genera
 {
     private readonly CordSdkOptions _cordSdkOptions;
 
-    public GenerateServerTokenCommandHandler(CordSdkOptions cordSdkOptions)
+    public GenerateServerTokenCommandHandler(IOptions<CordSdkOptions> cordSdkOptions)
     {
-        _cordSdkOptions = cordSdkOptions;
+        _cordSdkOptions = cordSdkOptions.Value;
     }
 
     public Task<string> Handle(GenerateServerTokenCommand request, CancellationToken cancellationToken)

@@ -3,6 +3,7 @@ using Cord.SDK.Objects;
 using RestSharp;
 using RestSharp.Authenticators;
 using IRestClient = Cord.SDK.Application.Abstractions.HttpRequest.IRestClient;
+using System.Net;
 
 namespace Cord.SDK.Infrastructure.HttpRequest;
 
@@ -10,6 +11,7 @@ internal sealed class RestSharpClient : IRestClient
 {
     private readonly RestClient _restClient;
     private readonly ITokenGenerator _tokenGenerator;
+    private static readonly HttpStatusCode[] _errorStatuses = new[] { HttpStatusCode.BadRequest, HttpStatusCode.InternalServerError, HttpStatusCode.Unauthorized, HttpStatusCode.Conflict };
 
     public RestSharpClient(RestClient restClient, ITokenGenerator tokenGenerator)
     {
@@ -65,8 +67,17 @@ internal sealed class RestSharpClient : IRestClient
         return response.Data;
     }
 
+    public async Task<TResponse?> Delete<TResponse>(string uri, CancellationToken cancellationToken)
+    {
+        var request = GenerateRequest(uri, Method.Delete);
+        var response = await _restClient.ExecuteAsync<TResponse>(request, cancellationToken);
+        ValidateResponse(response);
+        return response.Data;
+    }
+
     private void ValidateResponse<T>(RestResponse<T> response)
     {
+        if (!_errorStatuses.Contains(response.StatusCode)) return;
         CordErrorResponse? errorResponse =
             Newtonsoft.Json.JsonConvert.DeserializeObject<CordErrorResponse>(response?.Content ?? "");
         CordException.ThrowExceptionFromHttpResponse(response!.StatusCode, errorResponse?.Error ?? response?.Content,
