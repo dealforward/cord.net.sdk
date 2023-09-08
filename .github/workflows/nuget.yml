@@ -28,7 +28,7 @@ jobs:
         run: echo ${VERSION}
 
       - name: Build
-        run: dotnet build --configuration Release /p:Version=${VERSION}
+        run: dotnet build --configuration Release /p:Version=${VERSION} -f net6.0
 
       - name: Pack
         run: dotnet pack ${{env.ProjectPath}}/${{env.ProjectName}}.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
