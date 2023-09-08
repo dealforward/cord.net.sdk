@@ -3,7 +3,6 @@ name: Nuget
 env:
   ProjectPath: src/Cord.SDK
   ProjectName: Cord.SDK
-  TagName: Cord.SDK
 
 on:
   push:
@@ -21,6 +20,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.x
+
       - name: Get Version from TagName
         run: echo "VERSION=$GITHUB_REF_NAME" >> $GITHUB_ENV
       
@@ -28,7 +32,7 @@ jobs:
         run: echo ${VERSION}
 
       - name: Build
-        run: dotnet build --configuration Release /p:Version=${VERSION} -f net6.0
+        run: dotnet build --configuration Release /p:Version=${VERSION}
 
       - name: Pack
         run: dotnet pack ${{env.ProjectPath}}/${{env.ProjectName}}.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
