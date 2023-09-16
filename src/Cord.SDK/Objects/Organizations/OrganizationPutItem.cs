@@ -13,7 +13,7 @@ public sealed class OrganizationPutItem
     [JsonProperty("name")] public string Name { get; set; }
 
     [JsonProperty("status"), JsonConverter(typeof(StringEnumConverter))]
-    public OrganizationStatus Status { get; set; } = OrganizationStatus.active;
+    public OrganizationStatus Status { get; set; } = OrganizationStatus.Active;
 
     [JsonProperty("members")] public List<string> Members { get; set; } = new();
     /// <summary>
