@@ -31,4 +31,8 @@ public interface ICord
     /// All available operations for sending and manipulating notifications
     /// </summary>
     INotificationsContainer Notifications { get; }
+    /// <summary>
+    /// Using a single API call to update multiple users and organizations
+    /// </summary>
+    IBatchesContainer Batches { get; }
 }
