@@ -8,7 +8,8 @@ internal sealed class Cord : ICord
         ITokenGenerator tokenGenerator,
         IUsersContainer usersContainer,
         IOrganizationsContainer organizations,
-        IMessagesContainer messages
+        IMessagesContainer messages, 
+        INotificationsContainer notifications
     )
     {
         TokenGenerator = tokenGenerator;
@@ -16,6 +17,7 @@ internal sealed class Cord : ICord
         Users = usersContainer;
         Organizations = organizations;
         Messages = messages;
+        Notifications = notifications;
     }
 
     public ITokenGenerator TokenGenerator { get; }
@@ -23,4 +25,5 @@ internal sealed class Cord : ICord
     public IUsersContainer Users { get; }
     public IOrganizationsContainer Organizations { get; }
     public IMessagesContainer Messages { get; }
+    public INotificationsContainer Notifications { get; }
 }

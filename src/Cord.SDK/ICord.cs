@@ -27,4 +27,8 @@ public interface ICord
     /// </summary>
     /// <value></value>
     IMessagesContainer Messages { get; }
+    /// <summary>
+    /// All available operations for sending and manipulating notifications
+    /// </summary>
+    INotificationsContainer Notifications { get; }
 }
