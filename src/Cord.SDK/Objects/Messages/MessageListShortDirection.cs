@@ -1,7 +1,9 @@
+using System.Runtime.Serialization;
+
 namespace Cord.SDK.Objects;
 
 public enum MessageListShortDirection
 {
-    ascending,
-    descending
+    [EnumMember(Value = "ascending")] Ascending,
+    [EnumMember(Value = "descending")] Descending
 }
