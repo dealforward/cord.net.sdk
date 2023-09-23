@@ -1,41 +1,47 @@
-<svg fill="none" viewBox="0 0 600 300" width="600" height="0" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" width="100%" height="600" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
+    <div id="heading" xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .flex-container{display: flex; align-items: center; justify-content: center;}
-        .left-logo{border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #000000;padding: 0;margin: 0;flex-direction: column;width: 80px;}
-        .right-logo{border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #000000;padding: 0;margin: 0;flex-direction: column;width: 80px;margin-left: -10px;}
+        .left-logo{border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #0d4399;padding: 0;margin: 0;flex-direction: column;width: 120px;}
+        .right-logo{border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #0d4399;padding: 0;margin: 0;flex-direction: column;width: 120px;margin-left: -10px;}
+        #heading{
+          height:600px;
+          background: linear-gradient(159deg,#15f9ad 14.05%,#0d4399 100%);
+          padding:20px 0;
+          display:flex;
+          flex-direction:column;
+          justify-content:center;
+        }
+        .text-white{color:#f8f9fa !important;}
+        #shields{
+          width:100%;
+          height:50px;
+          margin-top:-30px;
+          text-align:center;
+        }
       </style>
+      <div class="flex-container">
+        <a href="https://cord.com/" class="left-logo">
+          <img src="src/Cord.SDK/cord.png">
+        </a>
+        <a href="https://dealforward.com/" class="right-logo">
+          <img src="https://prod-simpliciter-io.s3.eu-central-1.amazonaws.com/API%20Uploads/4fdd9646-f10e-4cdd-9ee9-004278f6da49/Frame_1_1_efcd76af2c.png">
+        </a>
+      </div>
+       <h1 align="center" class="text-white">Cord .NET SDK</h1>
+        <p align="center" class="text-white">Toolkit for the Cord.</p>
+    </div>
+    <div id="shields">
+      <img src="https://img.shields.io/nuget/dt/Cord.SDK"/>
+      <img src="https://img.shields.io/github/contributors/simpliciterio/cord.net.sdk?color=dark-green"/>
+      <img src="https://img.shields.io/github/issues/simpliciterio/cord.net.sdk"/>
+      <img src="https://img.shields.io/github/license/simpliciterio/cord.net.sdk"/>
+      <img src="https://img.shields.io/nuget/vpre/Cord.SDK"/>
     </div>
   </foreignObject>
 </svg>
 
-<p class="flex-container">
-  <a href="https://cord.com/" class="left-logo">
-    <img src="src/Cord.SDK/cord.png">
-  </a>
-   <a href="https://dealforward.com/" class="right-logo">
-    <img src="https://prod-simpliciter-io.s3.eu-central-1.amazonaws.com/API%20Uploads/4fdd9646-f10e-4cdd-9ee9-004278f6da49/Frame_1_1_efcd76af2c.png">
-  </a>
-
-  <h3 align="center">Cord .NET SDK</h3>
-
-  <p align="center">
-    Toolkit for the Cord.
-    <br/>
-    <br/>
-  </p>
-</p>
-
-<p class="flex-container">
-
-![Downloads](https://img.shields.io/nuget/dt/Cord.SDK)
-![Contributors](https://img.shields.io/github/contributors/simpliciterio/cord.net.sdk?color=dark-green)
-![Issues](https://img.shields.io/github/issues/simpliciterio/cord.net.sdk)
-![License](https://img.shields.io/github/license/simpliciterio/cord.net.sdk)
-![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Cord.SDK)
-
-</p>
 
 ## About The Project
 
