@@ -1,9 +1,20 @@
-<br/>
-<p align="center" style="display: flex; align-items: center; justify-content: center;">
-  <a href="https://cord.com/" style="border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #000000;padding: 0;margin: 0;flex-direction: column;width: 80px;">
+<svg fill="none" viewBox="0 0 600 300" width="600" height="0" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .flex-container{display: flex; align-items: center; justify-content: center;}
+        .left-logo{border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #000000;padding: 0;margin: 0;flex-direction: column;width: 80px;}
+        .right-logo{border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #000000;padding: 0;margin: 0;flex-direction: column;width: 80px;margin-left: -10px;}
+      </style>
+    </div>
+  </foreignObject>
+</svg>
+
+<p class="flex-container">
+  <a href="https://cord.com/" class="left-logo">
     <img src="src/Cord.SDK/cord.png">
   </a>
-   <a href="https://dealforward.com/" style="border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #000000;padding: 0;margin: 0;flex-direction: column;width: 80px;margin-left: -10px;">
+   <a href="https://dealforward.com/" class="right-logo">
     <img src="https://prod-simpliciter-io.s3.eu-central-1.amazonaws.com/API%20Uploads/4fdd9646-f10e-4cdd-9ee9-004278f6da49/Frame_1_1_efcd76af2c.png">
   </a>
 
@@ -16,7 +27,7 @@
   </p>
 </p>
 
-<p align="center">
+<p class="flex-container">
 
 ![Downloads](https://img.shields.io/nuget/dt/Cord.SDK)
 ![Contributors](https://img.shields.io/github/contributors/simpliciterio/cord.net.sdk?color=dark-green)
