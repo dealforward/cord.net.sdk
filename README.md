@@ -1,24 +1,21 @@
-<link rel="stylesheet" href="./readme.css">
+<img src="./src/Cord.SDK/header.png" />
+<br/>
+<p align="center" style="display: flex; align-items: center; justify-content: center;">
+  <h1 align="center">Cord .NET SDK</h1>
+  <p align="center">
+    Toolkit for the Cord.
+    <br/>
+    <br/>
+  </p>
+</p>
 
- <div id="heading" xmlns="http://www.w3.org/1999/xhtml">
-      <div class="flex-container">
-        <a href="https://cord.com/" class="left-logo">
-          <img src="src/Cord.SDK/cord.png">
-        </a>
-        <a href="https://dealforward.com/" class="right-logo">
-          <img src="https://prod-simpliciter-io.s3.eu-central-1.amazonaws.com/API%20Uploads/4fdd9646-f10e-4cdd-9ee9-004278f6da49/Frame_1_1_efcd76af2c.png">
-        </a>
-      </div>
-       <h1 align="center" class="text-white">Cord .NET SDK</h1>
-        <p align="center" class="text-white">Toolkit for the Cord.</p>
-    </div>
-    <div id="shields">
-      <img src="https://img.shields.io/nuget/dt/Cord.SDK"/>
-      <img src="https://img.shields.io/github/contributors/simpliciterio/cord.net.sdk?color=dark-green"/>
-      <img src="https://img.shields.io/github/issues/simpliciterio/cord.net.sdk"/>
-      <img src="https://img.shields.io/github/license/simpliciterio/cord.net.sdk"/>
-      <img src="https://img.shields.io/nuget/vpre/Cord.SDK"/>
-    </div>
+
+![Downloads](https://img.shields.io/nuget/dt/Cord.SDK)
+![Contributors](https://img.shields.io/github/contributors/simpliciterio/cord.net.sdk?color=dark-green)
+![Issues](https://img.shields.io/github/issues/simpliciterio/cord.net.sdk)
+![License](https://img.shields.io/github/license/simpliciterio/cord.net.sdk)
+![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Cord.SDK)
+
 
 ## About The Project
 
