@@ -1,10 +1,10 @@
 <br/>
-<p align="center">
-  <a href="https://cord.com/" style="margin-right:-15px;">
-    <img src="src/Cord.SDK/cord.png" style="border-radius:50%; border:3px solid black;" alt="Logo" width="80" height="80">
+<p align="center" style="display: flex; align-items: center; justify-content: center;">
+  <a href="https://cord.com/" style="border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #000000;padding: 0;margin: 0;flex-direction: column;width: 80px;">
+    <img src="src/Cord.SDK/cord.png">
   </a>
-   <a href="https://dealforward.com/">
-    <img src="https://prod-simpliciter-io.s3.eu-central-1.amazonaws.com/API%20Uploads/4fdd9646-f10e-4cdd-9ee9-004278f6da49/Frame_1_1_efcd76af2c.png" style="border-radius:50%; border:3px solid black;" alt="Logo" width="80" height="80">
+   <a href="https://dealforward.com/" style="border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #000000;padding: 0;margin: 0;flex-direction: column;width: 80px;margin-left: -10px;">
+    <img src="https://prod-simpliciter-io.s3.eu-central-1.amazonaws.com/API%20Uploads/4fdd9646-f10e-4cdd-9ee9-004278f6da49/Frame_1_1_efcd76af2c.png">
   </a>
 
   <h3 align="center">Cord .NET SDK</h3>
@@ -16,11 +16,15 @@
   </p>
 </p>
 
-<center>
+<p align="center">
 
-![Downloads](https://img.shields.io/nuget/dt/Cord.SDK) ![Contributors](https://img.shields.io/github/contributors/simpliciterio/cord.net.sdk?color=dark-green) ![Issues](https://img.shields.io/github/issues/simpliciterio/cord.net.sdk) ![License](https://img.shields.io/github/license/simpliciterio/cord.net.sdk) ![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Cord.SDK)
+![Downloads](https://img.shields.io/nuget/dt/Cord.SDK)
+![Contributors](https://img.shields.io/github/contributors/simpliciterio/cord.net.sdk?color=dark-green)
+![Issues](https://img.shields.io/github/issues/simpliciterio/cord.net.sdk)
+![License](https://img.shields.io/github/license/simpliciterio/cord.net.sdk)
+![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Cord.SDK)
 
-</center>
+</p>
 
 ## About The Project
 
@@ -69,14 +73,6 @@ builder.Services.AddCordSdk(opt =>
 
 To access Cord services, inject the ICord interface into your method or class.
 
-### Table Of Contents
-
-- **[Organizations | V1](#organizations--v1)**
-  - [Create Or Update](#organization--create-or-update)
-  - [List](#organization--list)
-  - [Get](#organization--get)
-  - [Update Members](#organization--update-members)
-
 ```csharp
 async Task MyMethod([FromServices] ICord cord)
 {
@@ -99,6 +95,16 @@ public class MyClass
 ```
 
 **All methods of services for the Rest API have implemented CancellationToken.**
+
+<!--
+### Table Of Contents
+
+- **[Organizations | V1](#organizations--v1)**
+  - [Create Or Update](#organization--create-or-update)
+  - [List](#organization--list)
+  - [Get](#organization--get)
+  - [Update Members](#organization--update-members)
+
 
 ### Organizations | V1
 
@@ -133,4 +139,4 @@ OrganizationGetItem item = await cord.Organization.V1.Get("my_id", CancellationT
 
 #### Organization | Update Members
 
-It is used to add or remove users to the organization in bulk.
+It is used to add or remove users to the organization in bulk. -->
