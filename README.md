@@ -1,26 +1,6 @@
-<svg fill="none" width="100%" height="600" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div id="heading" xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        .flex-container{display: flex; align-items: center; justify-content: center;}
-        .left-logo{border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #0d4399;padding: 0;margin: 0;flex-direction: column;width: 120px;}
-        .right-logo{border-radius: 50%;overflow: hidden;display: flex;border: 3px solid #0d4399;padding: 0;margin: 0;flex-direction: column;width: 120px;margin-left: -10px;}
-        #heading{
-          height:600px;
-          background: linear-gradient(159deg,#15f9ad 14.05%,#0d4399 100%);
-          padding:20px 0;
-          display:flex;
-          flex-direction:column;
-          justify-content:center;
-        }
-        .text-white{color:#f8f9fa !important;}
-        #shields{
-          width:100%;
-          height:50px;
-          margin-top:-30px;
-          text-align:center;
-        }
-      </style>
+<link rel="stylesheet" href="./readme.css">
+
+ <div id="heading" xmlns="http://www.w3.org/1999/xhtml">
       <div class="flex-container">
         <a href="https://cord.com/" class="left-logo">
           <img src="src/Cord.SDK/cord.png">
@@ -39,9 +19,6 @@
       <img src="https://img.shields.io/github/license/simpliciterio/cord.net.sdk"/>
       <img src="https://img.shields.io/nuget/vpre/Cord.SDK"/>
     </div>
-  </foreignObject>
-</svg>
-
 
 ## About The Project
 
