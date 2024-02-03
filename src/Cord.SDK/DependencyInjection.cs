@@ -1,3 +1,4 @@
+using Cord.SDK.Application.Abstractions.Services;
 using Cord.SDK.Infrastructure.HttpRequest;
 using Cord.SDK.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -55,6 +56,8 @@ public static class DependencyInjection
             .AddScoped<IBatchesV1, BatchesV1>()
             .AddScoped<IBatchesContainer, BatchesContainer>()
             .AddScoped<IGroupsV1, GroupsV1>()
-            .AddScoped<IGroupsContainer, GroupsContainer>();
+            .AddScoped<IGroupsContainer, GroupsContainer>()
+            .AddScoped<IPresenceContainer, PresenceContainer>()
+            .AddScoped<IPresenceV1, PresenceV1>();
     }
 }
