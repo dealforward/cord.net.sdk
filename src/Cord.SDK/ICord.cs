@@ -1,3 +1,5 @@
+using Cord.SDK.Application.Abstractions.Services;
+
 namespace Cord.SDK;
 
 public interface ICord
@@ -36,6 +38,11 @@ public interface ICord
     /// Using a single API call to update multiple users and organizations
     /// </summary>
     IBatchesContainer Batches { get; }
+
+    /// <summary>
+    /// All available operations for user presence
+    /// </summary>
+    IPresenceContainer Presences {get;}
     /// <summary>
     /// Rest service of the Groups.
     /// </summary>
