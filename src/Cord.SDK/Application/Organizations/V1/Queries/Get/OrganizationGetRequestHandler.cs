@@ -4,6 +4,7 @@ using Cord.SDK.Objects;
 
 namespace Cord.SDK.Application.Organizations.V1.Queries.Get;
 
+[Obsolete("Please use the group API instead of this.")]
 internal sealed class OrganizationGetRequestHandler : IQueryHandler<OrganizationGetRequest, OrganizationGetItem?>
 {
     private readonly IRestClient _restClient;

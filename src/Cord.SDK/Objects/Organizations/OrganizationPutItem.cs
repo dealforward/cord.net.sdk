@@ -5,6 +5,7 @@ namespace Cord.SDK.Objects;
 /// <summary>
 /// Used to update organization data.
 /// </summary>
+[Obsolete("Please use the group API instead of this.")]
 public sealed class OrganizationPutItem
 {
     [JsonConstructor]

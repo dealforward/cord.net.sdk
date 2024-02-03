@@ -1,5 +1,6 @@
 namespace Cord.SDK.Infrastructure.Services;
 
+[Obsolete("Please use the group API instead of this.")]
 internal sealed class OrganizationsContainer : IOrganizationsContainer
 {
     public OrganizationsContainer(IOrganizationsV1 v1)

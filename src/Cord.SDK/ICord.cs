@@ -23,6 +23,7 @@ public interface ICord
     /// Rest service for the Organizations.
     /// </summary>
     /// <value></value>
+    [Obsolete("Please use the group API instead of this.")]
     IOrganizationsContainer Organizations { get; }
     /// <summary>
     /// All available operations for listing and editing messages.
@@ -42,4 +43,8 @@ public interface ICord
     /// All available operations for user presence
     /// </summary>
     IPresenceContainer Presences {get;}
+    /// <summary>
+    /// Rest service of the Groups.
+    /// </summary>
+    IGroupsContainer Groups { get; }
 }

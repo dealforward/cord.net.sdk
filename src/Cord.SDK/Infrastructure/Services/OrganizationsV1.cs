@@ -9,6 +9,7 @@ using MediatR;
 
 namespace Cord.SDK.Infrastructure.Services;
 
+[Obsolete("Please use the group API instead of this.")]
 internal sealed class OrganizationsV1 : IOrganizationsV1
 {
     private readonly IMediator _mediator;

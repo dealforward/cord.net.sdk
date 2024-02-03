@@ -13,7 +13,8 @@ internal sealed class Cord : ICord
         IMessagesContainer messages,
         INotificationsContainer notifications,
         IBatchesContainer batches,
-        IPresenceContainer presences
+        IPresenceContainer presences,
+        IGroupsContainer groups
     )
     {
         TokenGenerator = tokenGenerator;
@@ -24,14 +25,17 @@ internal sealed class Cord : ICord
         Notifications = notifications;
         Batches = batches;
         Presences = presences;
+        Groups = groups;
     }
 
     public ITokenGenerator TokenGenerator { get; }
     public IThreadsContainer Threads { get; }
     public IUsersContainer Users { get; }
+    [Obsolete("Please use the group API instead of this.")]
     public IOrganizationsContainer Organizations { get; }
     public IMessagesContainer Messages { get; }
     public INotificationsContainer Notifications { get; }
     public IBatchesContainer Batches { get; }
     public IPresenceContainer Presences { get; }
+    public IGroupsContainer Groups { get; }
 }

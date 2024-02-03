@@ -53,6 +53,8 @@ public static class DependencyInjection
             .AddScoped<INotificationsV1, NotificationsV1>()
             .AddScoped<INotificationsContainer, NotificationsContainer>()
             .AddScoped<IBatchesV1, BatchesV1>()
-            .AddScoped<IBatchesContainer, BatchesContainer>();
+            .AddScoped<IBatchesContainer, BatchesContainer>()
+            .AddScoped<IGroupsV1, GroupsV1>()
+            .AddScoped<IGroupsContainer, GroupsContainer>();
     }
 }
