@@ -35,4 +35,8 @@ public interface ICord
     /// Using a single API call to update multiple users and organizations
     /// </summary>
     IBatchesContainer Batches { get; }
+    /// <summary>
+    /// Rest service of the Groups.
+    /// </summary>
+    IGroupsContainer Groups { get; }
 }
