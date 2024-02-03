@@ -3,6 +3,7 @@ using Cord.SDK.Exceptions;
 
 namespace Cord.SDK;
 
+[Obsolete("Please use the group API instead of this.")]
 public interface IOrganizationsV1
 {
     /// <summary>

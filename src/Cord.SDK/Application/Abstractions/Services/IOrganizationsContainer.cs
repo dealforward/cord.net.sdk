@@ -1,5 +1,6 @@
 namespace Cord.SDK;
 
+[Obsolete("Please use the group API instead of this.")]
 public interface IOrganizationsContainer
 {
     /// <summary>
