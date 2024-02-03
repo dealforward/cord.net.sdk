@@ -21,6 +21,7 @@ public interface ICord
     /// Rest service for the Organizations.
     /// </summary>
     /// <value></value>
+    [Obsolete("Please use the group API instead of this.")]
     IOrganizationsContainer Organizations { get; }
     /// <summary>
     /// All available operations for listing and editing messages.

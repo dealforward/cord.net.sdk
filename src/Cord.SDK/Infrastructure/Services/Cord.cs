@@ -21,11 +21,13 @@ internal sealed class Cord : ICord
         Messages = messages;
         Notifications = notifications;
         Batches = batches;
+        Groups = groups;
     }
 
     public ITokenGenerator TokenGenerator { get; }
     public IThreadsContainer Threads { get; }
     public IUsersContainer Users { get; }
+    [Obsolete("Please use the group API instead of this.")]
     public IOrganizationsContainer Organizations { get; }
     public IMessagesContainer Messages { get; }
     public INotificationsContainer Notifications { get; }
