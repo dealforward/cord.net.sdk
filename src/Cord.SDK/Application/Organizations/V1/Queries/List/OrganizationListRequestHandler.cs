@@ -4,6 +4,7 @@ using Cord.SDK.Objects;
 
 namespace Cord.SDK.Application.Organizations.V1.Queries.List;
 
+[Obsolete("Please use the group API instead of this.")]
 internal sealed class
     OrganizationListRequestHandler : IQueryHandler<OrganizationListRequest, IEnumerable<OrganizationListItem>?>
 {
