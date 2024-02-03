@@ -21,6 +21,7 @@ public interface ICord
     /// Rest service for the Organizations.
     /// </summary>
     /// <value></value>
+    [Obsolete("Please use the group API instead of this.")]
     IOrganizationsContainer Organizations { get; }
     /// <summary>
     /// All available operations for listing and editing messages.
@@ -35,4 +36,8 @@ public interface ICord
     /// Using a single API call to update multiple users and organizations
     /// </summary>
     IBatchesContainer Batches { get; }
+    /// <summary>
+    /// Rest service of the Groups.
+    /// </summary>
+    IGroupsContainer Groups { get; }
 }

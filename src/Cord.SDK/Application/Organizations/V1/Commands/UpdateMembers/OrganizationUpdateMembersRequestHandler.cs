@@ -4,6 +4,7 @@ using Cord.SDK.Objects;
 
 namespace Cord.SDK.Application.Organizations.V1.Commands.UpdateMembers;
 
+[Obsolete("Please use the group API instead of this.")]
 internal sealed class
     OrganizationUpdateMembersRequestHandler : ICommandHandler<OrganizationUpdateMembersRequest,
         IEnumerable<UserListItem>?>

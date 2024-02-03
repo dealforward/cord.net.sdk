@@ -1,13 +1,12 @@
-using Cord.SDK.Objects;
 using Cord.SDK.Exceptions;
+using Cord.SDK.Objects;
 
 namespace Cord.SDK;
 
-[Obsolete("Please use the group API instead of this.")]
-public interface IOrganizationsV1
+public interface IGroupsV1
 {
     /// <summary>
-    /// According to the Id value sent, if the organization exists, it is updated with the payload. Otherwise, a new organization is created with the payload and Id value.
+    /// According to the Id value sent, if the group exists, it is updated with the payload. Otherwise, a new group is created with the payload and Id value.
     /// </summary>
     /// <param name="id">Organization Id</param>
     /// <param name="item">Request payload</param>
@@ -27,13 +26,13 @@ public interface IOrganizationsV1
     /// <exception cref="InvalidAccessTokenException"></exception>
     /// <exception cref="ExpiredAccessTokenException"></exception>
     /// <exception cref="CordException">Generic unknown server error.</exception>
-    Task<CordResponse?> CreateOrUpdate(string id, OrganizationPutItem item, CancellationToken cancellationToken);
-
+    Task<CordResponse?> CreateOrUpdate(string id, GroupPutItem item, CancellationToken cancellationToken);
+    
     /// <summary>
-    /// It is used to add or remove users to the organization in bulk.
+    /// It is used to add users to the group in bulk.
     /// </summary>
     /// <param name="id">Organization Id</param>
-    /// <param name="members">Request Payload</param>
+    /// <param name="users">Request Payload</param>
     /// <param name="cancellationToken">For Cancellation Request</param>
     /// <exception cref="InvalidRequestException"></exception>
     /// <exception cref="UnexpectedFieldException"></exception>
@@ -50,14 +49,14 @@ public interface IOrganizationsV1
     /// <exception cref="ExpiredAccessTokenException"></exception>
     /// <exception cref="CordException">Generic unknown server error.</exception>
     /// <returns>Users List</returns>
-    Task<IEnumerable<UserListItem>?> UpdateMembers(string id, OrganizationUpdateMembers members,
+    Task<IEnumerable<UserListItem>?> AddMembers(string id, IEnumerable<string> users,
         CancellationToken cancellationToken);
-
+    
     /// <summary>
-    /// It is used to add users to the organization in bulk. It uses the same API as the UpdateMembers method.
+    /// It is used to remove users from the group in bulk.
     /// </summary>
     /// <param name="id">Organization Id</param>
-    /// <param name="members">Request Payload as List of UserId</param>
+    /// <param name="users">Request Payload</param>
     /// <param name="cancellationToken">For Cancellation Request</param>
     /// <exception cref="InvalidRequestException"></exception>
     /// <exception cref="UnexpectedFieldException"></exception>
@@ -73,15 +72,15 @@ public interface IOrganizationsV1
     /// <exception cref="InvalidAccessTokenException"></exception>
     /// <exception cref="ExpiredAccessTokenException"></exception>
     /// <exception cref="CordException">Generic unknown server error.</exception>
-    /// <returns>User List</returns>
-    Task<IEnumerable<UserListItem>?> AddMembers(string id, IEnumerable<string> members,
+    /// <returns>Users List</returns>
+    Task<IEnumerable<UserListItem>?> RemoveMembers(string id, IEnumerable<string> users,
         CancellationToken cancellationToken);
-
+    
     /// <summary>
-    /// Used to remove users from the organization in bulk. It uses the same API as the UpdateMembers method.
+    /// It is used to add or remove users to the group in bulk.
     /// </summary>
     /// <param name="id">Organization Id</param>
-    /// <param name="members">Request Payload as List of UserId</param>
+    /// <param name="item">Request Payload</param>
     /// <param name="cancellationToken">For Cancellation Request</param>
     /// <exception cref="InvalidRequestException"></exception>
     /// <exception cref="UnexpectedFieldException"></exception>
@@ -97,12 +96,13 @@ public interface IOrganizationsV1
     /// <exception cref="InvalidAccessTokenException"></exception>
     /// <exception cref="ExpiredAccessTokenException"></exception>
     /// <exception cref="CordException">Generic unknown server error.</exception>
-    /// <returns>User List</returns>
-    Task<IEnumerable<UserListItem>?> RemoveMembers(string id, IEnumerable<string> members,
+    /// <returns>Users List</returns>
+    Task<IEnumerable<UserListItem>?> UpdateMembers(string id, GroupMemberPostItem item,
         CancellationToken cancellationToken);
-
+    
+    
     /// <summary>
-    /// Lists all organizations in Application.
+    /// Lists all group in Application.
     /// </summary>
     /// <param name="cancellationToken">For Cancellation Request</param>
     /// <exception cref="InvalidRequestException"></exception>
@@ -120,10 +120,10 @@ public interface IOrganizationsV1
     /// <exception cref="ExpiredAccessTokenException"></exception>
     /// <exception cref="CordException">Generic unknown server error.</exception>
     /// <returns>List of Organizations</returns>
-    Task<IEnumerable<OrganizationListItem>?> List(CancellationToken cancellationToken);
-
+    Task<IEnumerable<GroupListItem>?> List(CancellationToken cancellationToken);
+    
     /// <summary>
-    /// Detailed information of the related organization according to the organization id value sent.
+    /// Detailed information of the related group according to the organization id value sent.
     /// </summary>
     /// <param name="id">Organization Id</param>
     /// <param name="cancellationToken">For Cancellation Request</param>
@@ -142,5 +142,5 @@ public interface IOrganizationsV1
     /// <exception cref="ExpiredAccessTokenException"></exception>
     /// <exception cref="CordException">Generic unknown server error.</exception>
     /// <returns></returns>
-    Task<OrganizationGetItem?> Get(string id, CancellationToken cancellationToken);
+    Task<GroupGetItem?> Get(string id, CancellationToken cancellationToken);
 }
